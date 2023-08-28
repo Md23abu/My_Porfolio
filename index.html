@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="color-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main Container Start -->
+    <div class="main-container" id="home-top">
+        <!-- Aside Start -->
+        <div class="aside">
+            <div class="logo">
+                <a href="#"><span></span>Md Abu<span>_P</span></a>
+            </div>
+            <div class="nav-toggler">
+                <span></span>
+            </div>
+            <ul class="nav">
+                <li><a href="#home-top" class="active"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fa fa-address-card"></i> About</a></li>
+                <li><a href="#skills"><i class="fa fa-cogs"></i> Skills</a></li>
+                <li><a href="#"><i class="fa fa-address-book"></i> Contact</a></li>
+            </ul>
+        </div>
+        <!-- Aside End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- Home Section Start -->
+            <section class="home section hidden">
+                <div class="container">
+                    <div class="row">
+                        <div class="home-info padd-15">
+                            <h3 class="hello">Hello! I'm <span class="name">Mohammed Abuthar</span></h3>
+                            <h3 class="my-profession">I'm a passionate software developer actively seeking a role that will challenge and utilize my skills.  <span class="typing"></span> </h3>
+                            <p>I graduated with a degree in engineering in 2022 from Nellai College of Engineering. My strength lies in my adaptability, as I can quickly grasp and work with any database or programming language.
+                            </p>
+                            <a href="#contact" class="btn hire-me">Hire Me</a>
+                        </div>
+                        <div class="home-img padd-15">
+                            <img src="Image/Abuthar.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Home Section End -->
+            <!-- Skills Section Start -->
+            <section class="skills section" id="skills">
+                <div class="container">
+                    <h2 class="section-title">My Skills</h2>
+                    <div class="skills-container">
+                        <!-- Python -->
+                        <div class="skill-card">
+                            <i class="fab fa-python skill-icon"></i>
+                            <p>Python</p>
+                        </div>
+                        <!-- Django -->
+                        <div class="skill-card">
+                            <i class="fas fa-project-diagram skill-icon"></i>
+                            <p>Django</p>
+                        </div>
+                        <!-- MySQL -->
+                        <div class="skill-card">
+                            <i class="fas fa-database skill-icon"></i>
+                            <p>MySQL</p>
+                        </div>
+                        <!-- HTML5 -->
+                        <div class="skill-card">
+                            <i class="fab fa-html5 skill-icon"></i>
+                            <p>HTML5</p>
+                        </div>
+                        <!-- CSS -->
+                        <div class="skill-card">
+                            <i class="fab fa-css3-alt skill-icon"></i>
+                            <p>CSS</p>
+                        </div>
+                        <!-- JavaScript -->
+                        <div class="skill-card">
+                            <i class="fab fa-js skill-icon"></i>
+                            <p>JavaScript</p>
+                        </div>
+                        <!-- Git -->
+                        <div class="skill-card">
+                            <i class="fab fa-git skill-icon"></i>
+                            <p>Git</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Skills Section End -->
+        </div>
+        <!-- Main Content End -->
+    </div>
+    <!-- Main Container End -->
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
