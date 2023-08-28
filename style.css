@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap");
-:root {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap");:root {
     --bg-black-900: #f2f2fc;
     --bg-black-100: #fdf9ff;
     --bg-black-50: #e8dfec;
@@ -129,7 +128,7 @@ body {
     top: 20px;
     border-radius: 5px;
     background: var(--bg-black-100);
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -283,14 +282,15 @@ h3.my-profession {
     color: var(--skin-color);
     margin-bottom: 15px;
 }
-
-/* ... Your Existing CSS ... */
-
 /* Mobile Responsiveness */
-@media (max-width: 1200px) {
-    .skill-card {
-        flex: 0 1 calc(33% - 20px); /* Three cards per row minus gap */
+@media (min-width: 769px) {
+    .nav-toggler {
+        display: none;
     }
+}
+
+@media (max-width: 1200px) {
+    /* ... your existing styles ... */
 }
 
 @media (max-width: 768px) {
@@ -298,7 +298,7 @@ h3.my-profession {
         width: 100%;
         height: auto;
         padding: 0;
-        position: static;
+        position: relative; /* Changed from static */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -307,8 +307,9 @@ h3.my-profession {
 
     .aside .logo {
         position: relative;
-        top: auto;
+        top: 10px; /* Adjusted top position */
         margin: 10px;
+        font-size: 24px; /* Adjusted font size */
     }
 
     .aside .nav {
@@ -318,33 +319,25 @@ h3.my-profession {
         width: 100%;
     }
 
-    .aside .nav.active {
-        display: flex;
-    }
-
-    .aside .nav li {
-        margin: 10px 0;
-    }
-
-    .aside .nav-toggler {
-        display: flex;
-        position: relative;
-        left: auto;
-        top: auto;
-    }
-
     .main-content {
         padding-left: 0;
     }
 
-    .home .home-info,
-    .home .home-img {
+    .home .home-info, .home .home-img {
         flex: 0 0 100%;
         max-width: 100%;
     }
 
     .skill-card {
         flex: 0 1 calc(50% - 20px); /* Two cards per row minus gap */
+    }
+
+    .section {
+        padding: 0 15px;
+    }
+
+    .container {
+        padding: 0;
     }
 }
 
@@ -353,5 +346,3 @@ h3.my-profession {
         flex: 0 1 100%; /* One card per row */
     }
 }
-
-
