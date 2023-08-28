@@ -182,76 +182,7 @@ body {
 /* Home Sectiom */
 .home {
     min-height: 100vh;
-    display: flex;/* ... Your previous CSS ... */
-
-    /* Mobile responsiveness */
-    @media (max-width: 1200px) {
-        .skill-card {
-            flex: 0 1 calc(33% - 20px); /* Three cards per row minus gap */
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .skill-card {
-            flex: 0 1 calc(50% - 20px); /* Two cards per row minus gap */
-        }
-    
-        /* Convert aside to top navigation */
-        .aside {
-            width: 100%;
-            height: 70px;
-            position: relative;
-            padding: 10px;
-            border-bottom: 1px solid var(--bg-black-50);
-        }
-    
-        .aside .nav {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            position: absolute;
-            top: 70px;
-            left: 0;
-            width: 100%;
-            background-color: var(--bg-black-100);
-            z-index: 10;
-        }
-    
-        .aside .nav.active {
-            display: flex;
-        }
-    
-        .aside .nav li {
-            margin: 10px 0;
-        }
-    
-        /* Display the nav toggler */
-        .aside .nav-toggler {
-            display: flex;
-        }
-    
-        /* Adjust the main content */
-        .main-content {
-            padding-left: 0;
-        }
-    
-        /* Home section adjustments */
-        .home .row {
-            flex-direction: column-reverse;
-        }
-    
-        .home .home-info, .home .home-img {
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .skill-card {
-            flex: 0 1 100%; /* One card per row */
-        }
-    }
-    
+    display: flex;
     color: var(--text-black-900);
 }
 .home .home-info {
@@ -353,7 +284,9 @@ h3.my-profession {
     margin-bottom: 15px;
 }
 
-/* Mobile responsiveness */
+/* ... Your Existing CSS ... */
+
+/* Mobile Responsiveness */
 @media (max-width: 1200px) {
     .skill-card {
         flex: 0 1 calc(33% - 20px); /* Three cards per row minus gap */
@@ -361,6 +294,55 @@ h3.my-profession {
 }
 
 @media (max-width: 768px) {
+    .aside {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--bg-black-100);
+    }
+
+    .aside .logo {
+        position: relative;
+        top: auto;
+        margin: 10px;
+    }
+
+    .aside .nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .aside .nav.active {
+        display: flex;
+    }
+
+    .aside .nav li {
+        margin: 10px 0;
+    }
+
+    .aside .nav-toggler {
+        display: flex;
+        position: relative;
+        left: auto;
+        top: auto;
+    }
+
+    .main-content {
+        padding-left: 0;
+    }
+
+    .home .home-info,
+    .home .home-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
     .skill-card {
         flex: 0 1 calc(50% - 20px); /* Two cards per row minus gap */
     }
@@ -371,3 +353,5 @@ h3.my-profession {
         flex: 0 1 100%; /* One card per row */
     }
 }
+
+
